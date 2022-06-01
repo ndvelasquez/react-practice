@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import FiguresPage from './routes/figuresPage';
 import DiscountsPage from './routes/discountsPage';
@@ -9,7 +9,7 @@ import AveragesPage from './routes/averagesPage';
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index />
@@ -26,5 +26,5 @@ root.render(
         />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 )
